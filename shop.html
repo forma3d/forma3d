@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+
+
+<html lang="uk">
+
+
+<!-- Скрипт на текст та вигляд відкритий -->
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDZWNT55C3"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RDZWNT55C3');
+</script>
+<!-- Скрипт на текст та вигляд закритий -->
+
+
+<!-- Head відкритий -->
+<head>
+    <!-- Open Graph / Link Preview -->
+  <meta property="og:title" content="Forma3D — 3D-друк, фігурки, кастомні моделі" />
+  <meta property="og:description" content="Замов унікальні 3D-вироби — фігурки, підставки, брелоки, декор. Швидко, якісно та креативно!" />
+  <meta property="og:image" content="https://solllixxx.github.io/forma3d/logo.png" />
+  <meta property="og:url" content="https://solllixxx.github.io/forma3d/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forma3D - Магазин</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="shop.css">
+</head>
+<!-- Head закритий -->
+
+
+<!-- Body відкритий -->
+<body>
+
+
+<!-- Header відкритий -->
+<header id="navbar">
+  <div class="logo">FORMA3D</div>
+  
+<div class="search-container" id="searchWrapper">
+    <div class="search-icon-label">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+    </div>
+
+    <input type="text" 
+           class="search-input" 
+           id="mainSearch" 
+           placeholder="Пошук..." 
+           oninput="liveSearch()" 
+           onfocus="this.parentElement.classList.add('active')" 
+           onblur="handleBlur()">
+
+    <div id="searchSuggestions" class="search-results-popover"></div>
+</div>
+
+<div class="cart-container" onclick="openCart()">
+  <div class="cart-icon">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white">
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+    </svg>
+  </div>
+  <span id="cartCount" class="cart-count">0</span>
+</div>
+
+<div style="display: flex; align-items: center;">
+  <a href="index.html" class="btn btn-home">
+    <svg class="home-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="19" y1="12" x2="5" y2="12"></line>
+      <polyline points="12 19 5 12 12 5"></polyline>
+    </svg>
+    <span class="home-text">НА ГОЛОВНУ</span>
+  </a>
+</div>
+</header>
+<!-- Header закритий -->
+
+
+<!-- Секція головна відкрита -->
+<section class="hero show" id="home">
+  <h1>Магазин 3D друку.</h1>
+</section>
+<!-- Секція головна закрита -->
+
+
+<!-- Секція товарів та категорій відкрита -->
+<!-- Секція товарів та категорій відкрита -->
+<section id="services">
+  <h2 style="font-size: 32px; margin-bottom: 40px;">Наші товари</h2>
+
+  <div class="categories-filter">
+    <button class="filter-btn active" onclick="filterCategory('all', event)">Усі</button>
+    <button class="filter-btn" onclick="filterCategory('electronics', event)">Аксесуари для електроніки</button>
+    <button class="filter-btn" onclick="filterCategory('household', event)">Побутові товари</button>
+    <button class="filter-btn" onclick="filterCategory('home', event)">Для дому</button>
+    <button class="filter-btn" onclick="filterCategory('kids', event)">Для дітей</button>
+    <button class="filter-btn" onclick="filterCategory('fdm', event)">FDM-Друк</button>
+    <button class="filter-btn" onclick="filterCategory('sla', event)">SLA-Друк</button>
+  </div>
+
+  <div class="grid">
+
+    <!-- ВСІ ЗВИЧАЙНІ ТОВАРИ -->
+    <!-- tovar 1 -->
+    <div class="card category-kids category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 1.jpg" alt="Товар 1">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>3D Фігурка динозавр Діно Рекс</h3>
+        <div class="price-row">
+          <p>50 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304172')">ART-304172</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('3D Фігурка динозавр Діно Рекс', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 2 -->
+    <div class="card category-kids category-home category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 2.jpg" alt="Товар 2">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Фігура кам'яного обличчя</h3>
+        <div class="price-row">
+          <p>150 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304603')">ART-304603</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Фігура кам\'яного обличчя', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 3 -->
+    <div class="card category-home category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 3.png" alt="Товар 3">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Підпірка для дверей</h3>
+        <div class="price-row">
+          <p>100 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304311')">ART-304311</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Підпірка для дверей', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 4 -->
+    <div class="card category-electronics category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 4.jpg" alt="Товар 4">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Кейс для microSD-карт</h3>
+        <div class="price-row">
+          <p>100 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-1254')">ART-1254</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Кейс для microSD-карт', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 5 -->
+    <div class="card category-household category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 5.jpg" alt="Товар 5">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Тримач ременя</h3>
+        <div class="price-row">
+          <p>50 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-001')">ART-001</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Тримач ременя', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 6 -->
+    <div class="card category-household category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 6.jpg" alt="Товар 6">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Ручка для пакетів</h3>
+        <div class="price-row">
+          <p>200 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-3334')">ART-3334</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Ручка для пакетів', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 7 -->
+    <div class="card category-household category-home category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 7.jpg" alt="Товар 7">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Заглушка на болт</h3>
+        <div class="price-row">
+          <p>50 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304105')">ART-304105</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Заглушка на болт', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 8 -->
+    <div class="card category-electronics category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 8.jpg" alt="Товар 8">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Підставка під телефон у формі серця UA</h3>
+        <div class="price-row">
+          <p>100 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-1615')">ART-1615</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Стандартний">Стандартний</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Підставка під телефон у формі серця UA', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 9 -->
+    <div class="card category-electronics category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 9.jpg" alt="Товар 9">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Підставка під телефон "Хвиля"</h3>
+        <div class="price-row">
+          <p>70 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-1251')">ART-1251</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Підставка під телефон Хвиля', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 10 -->
+    <div class="card category-electronics category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 10.png" alt="Товар 10">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Підставка під Планшет, або Електронної книги</h3>
+        <div class="price-row">
+          <p>150 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-1832')">ART-1832</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Підставка під Планшет, або Електронної книги', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 11 -->
+    <div class="card category-electronics category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 11.jpg" alt="Товар 11">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Підставка під телефон "Піраміда"</h3>
+        <div class="price-row">
+          <p>50 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-1193')">ART-1193</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Підставка під телефон Піраміда', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+    <!-- tovar 12 -->
+    <div class="card category-home category-household category-fdm">
+      <div class="card-image">
+        <img src="image/tovar 12.jpg" alt="Товар 12">
+        <div class="product-badge badge">FDM</div>
+      </div>
+      <div class="card-info">
+        <h3>Набір тримачей для біт</h3>
+        <div class="price-row">
+          <p>100 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304406')">ART-304406</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Набір тримачей для біт', this)">КУПИТИ</a>
+      </div>
+    </div>
+
+        <!-- tovar 13 -->
+         <!--
+    <div class="card category-sla">
+      <div class="card-image">
+        <img src="image/tovar 13.jpg" alt="Товар 13">
+        <div class="product-badge badge">SLA</div>
+      </div>
+      <div class="card-info">
+        <h3>Набір тримачей для біт</h3>
+        <div class="price-row">
+          <p>100 ₴</p>
+          <span class="sku-btn" onclick="copySKU(this, 'ART-304406')">ART-304406</span>
+        </div>
+        <select class="color-select">
+          <option value="">Оберіть колір...</option>
+          <option value="Чорний">Чорний</option>
+          <option value="Білий">Білий</option>
+          <option value="Синій">Синій</option>
+          <option value="Жовтий">Жовтий</option>
+          <option value="Червоний">Червоний</option>
+          <option value="Зелений">Зелений</option>
+          <option value="Помаранчевий">Помаранчевий</option>
+          <option value="Багряний">Багряний</option>
+          <option value="Темно-червоний">Темно-червоний</option>
+          <option value="Прозоро-синій">Прозоро-синій</option>
+          <option value="Прозоро-зелений">Прозоро-зелений</option>
+          <option value="Пляшковий-зелений">Пляшковий-зелений</option>
+        </select>
+        <a href="javascript:void(0)" class="buy-btn" style="margin-top:0px; margin-bottom: 15px; background:#2a2a2a; color:white;" onclick="addToCart(this)">В КОШИК</a>
+        <a href="javascript:void(0)" class="buy-btn" onclick="openOrderModal('Набір тримачей для біт', this)">КУПИТИ</a>
+      </div>
+    </div>
+  -->
+
+      </div>
+    </section>
+<!-- Секція товарів та категорій закрита -->
+
+
+<!-- Footer відкритий -->
+<footer>
+  <div class="footer-container">
+    <div class="footer-header">
+      <div class="logo">FORMA3D</div>
+      <a href="#home" class="btn" style="padding: 12px 28px; font-size: 14px;">ВГОРУ</a>
+    </div>
+
+    <div class="footer-grid">
+
+<div class="footer-col">
+  <h4>Контакти</h4>
+  
+  <div class="contact-line">
+    Пошта: <a href="javascript:void(0)" onclick="sendMailDirect('forma3d.info.ua@gmail.com')">forma3d.info.ua@gmail.com</a>
+  </div>
+
+  <div class="contact-line">
+    Телефон: 
+    <a href="tel:0677772819">0677772819</a> | <a href="tel:0684061351">0684061351</a>
+  </div>
+
+  <div class="contact-line">
+    Telegram: <a href="https://t.me/zippoziga" target="_blank">@zippoziga</a> | <a href="https://t.me/Nipro1345256" target="_blank">@Nipro1345256</a>
+  </div>
+</div>
+      
+            <div class="footer-col">
+        <h4>Навігація</h4>
+<a href="#home">Головна</a>
+        <a href="#services">Магазин</a>
+        <a href="#" onclick="openContact()">Зв'язатися</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>ІНФОРМАЦІЯ</h4>
+        <a href="privacy.html">Політика конфіденційності</a>
+        <a href="https://forms.gle/jVDHXVntzxa94ea79">Залишити відгук</a>
+        <a href="https://send.monobank.ua/jar/9Ssse8SqZK">Задонатити на розвиток</a>
+      </div>
+    </div>
+
+<div class="footer-bottom">
+  <p>© 2024 – <span id="current-year"></span> Forma3D Studio була заснована власником Дмитро Орлов (zippoziga).</p>
+        <p>
+        <a href="javascript:void(0)" onclick="sendMailDirect('zazhytskyi1@gmail.com', 'Розробка сайту')" class="developer-link">
+          Розробник сайту Зажицький Ярослав (solix).
+        </a>
+      </p>
+  <p>Ukraine</p>
+</div>
+
+
+<!-- Оновлення року відкрите -->
+<script>
+  // Автоматичне оновлення поточного року у футері
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
+<!-- Оновлення року закрите -->
+
+
+</footer>
+<!-- Footer закритий -->
+
+
+<!-- Modal вікно Кошику відкрите -->
+<div id="cartModal" class="modal-overlay" onclick="closeCart(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    
+    <div class="modal-header">
+      <span style="font-size:22px;font-weight:800;">Кошик</span>
+      <span class="close-modal" onclick="closeCart()">✖</span>
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div style="margin-top:20px; font-weight:600;">
+      Всього: <span id="cartTotal">0</span> ₴
+    </div>
+
+    <label>Ваш номер телефону:</label>
+    <input type="tel" id="cartPhone" maxlength="10" placeholder="0XXXXXXXXX" oninput="this.value = this.value.replace(/[^0-9]/g, '')" inputmode="numeric">
+
+        <p style="font-size: 13px; color: #a1a1aa; margin-top: 20px; line-height: 1.4;">
+            Адміністратор зателефонує вам для уточнення деталей.
+        </p>
+        
+    <button class="buy-btn" onclick="sendCartOrder()">ЗАМОВИТИ</button>
+
+  </div>
+</div>
+<!-- Modal вікно Кошику закрите -->
+
+
+<!-- Modal вікно Зв’язку відкрите -->
+<div class="contact-overlay" id="contactOverlay" onclick="closeContact()"></div>
+<div class="horizontal-contact" id="horizontalContact" onclick="openContact()">Зв'язок</div>
+
+<div class="contact-bar" id="contactBar">
+  <div class="contact-content">
+
+    <div style="display: flex; justify-content: space-between; margin-bottom: 30px; font-size: 22px; font-weight: 800;">
+      <span>Зв'язок</span>
+      <span style="cursor:pointer; color: white;" onclick="closeContact()">✖</span>
+    </div>
+
+    <label style="font-size: 12px; color: var(--text-gray);">Email:</label>
+    <input type="email" id="email" value="forma3d.info.ua@gmail.com" readonly />
+    <label style="font-size: 12px; color: var(--text-gray);">Повідомлення:</label>
+    
+    <textarea id="message" placeholder="Введіть ваше повідомлення..."></textarea>
+
+    <button onclick="sendMail()">Відправити</button>      
+  </div>
+</div>
+<!-- Modal вікно Зв’язку закрите -->
+
+
+<!-- Modal вікно Замовлення відкрите -->
+<div id="orderModal" class="modal-overlay" onclick="handleOutsideClick(event)">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <div class="modal-header">
+            <div>
+                <span style="font-size: 22px; font-weight: 800; display: block;">Оформлення</span>
+                <span id="selectedProductTitle" style="font-size: 14px; color: var(--text-gray);">Товар</span>
+            </div>
+            <span class="close-modal" onclick="closeOrderModal()">✖</span>
+        </div>
+        
+        <label>Ваш номер телефону:</label>
+        <input type="tel" id="userPhone" maxlength="10" placeholder="0XXXXXXXXX">
+
+        <p style="font-size: 13px; color: #a1a1aa; margin-top: 20px; line-height: 1.4;">
+            Адміністратор зателефонує вам для уточнення деталей.
+        </p>
+
+        <input type="hidden" id="currentProductName" value="">
+<input type="hidden" id="currentProductSKU" value="">
+<input type="hidden" id="currentPrintType" value="">
+
+        <button class="buy-btn" style="width: 100%; border: none; cursor: pointer; margin-top: 15px;" onclick="validateAndSend()">ЗАМОВИТИ</button>
+    </div>
+</div>
+<!-- Modal вікно Замовлення закрите -->
+
+
+<!-- Підключення  JS логіки відкрите -->
+   <script src="shop.js"></script>
+<!-- Підключення  JS логіки закрите -->
+
+
+</body>
+<!-- Body  закритий --!>
+
+
+<!-- Оформлення замовлення відкрите --!>
+<div id="orderLoader">
+    <img src="image/download.png" alt="Forma3D">
+    <p style="color: white; margin-top: 10px; font-weight: bold;">Оформлюємо замовлення...</p>
+</div>
+<!-- Оформлення замовлення закрите --!>
+ 
+
+</html>
+
